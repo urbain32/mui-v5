@@ -1,15 +1,10 @@
-import { Box } from "@mui/material"
+import { Box } from "@mui/material";
 
 const Rightbar = () => {
   return (
-    <Box
-      bgcolor='lightblue'
-      sx={{ display: { xs: 'none', sm: 'inline-block' } }}
-      flex={3}
-      p={2}
-    >
-      Rightbar
+    <Box sx={{ display: { xs: "none", sm: "block" } }} flex={2} p={2}>
+      <Box position='fixed'>Rightbar</Box>
     </Box>
   );
-}
-export default Rightbar
+};
+export default Rightbar;
