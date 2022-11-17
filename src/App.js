@@ -4,6 +4,7 @@ import Rightbar from "./components/Rightbar";
 import Feed from "./components/Feed";
 import { Box, Stack } from "@mui/material";
 import { useState } from "react";
+import Adding from "./components/Add";
 function App() {
   const [like, setLike] = useState(0);
   return (
@@ -15,6 +16,7 @@ function App() {
         <Feed like={like} setLike={setLike} />
         <Rightbar />
       </Stack>
+      <Adding />
     </Box>
   );
 }
