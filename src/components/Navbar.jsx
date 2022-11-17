@@ -37,7 +37,7 @@ const UserBox = styled(Box)(({ theme }) => ({
   alignItems: "center",
   gap: "5px",
 }));
-const Navbar = () => {
+const Navbar = ({ like }) => {
   const [open, setOpen] = useState(false);
   return (
     <AppBar position='sticky'>
@@ -50,7 +50,7 @@ const Navbar = () => {
           <InputBase placeholder='search' />{" "}
         </Search>
         <Icons>
-          <Badge badgeContent={4} color='error'>
+          <Badge badgeContent={like ? like : "4"} color='error'>
             <MailIcon />
           </Badge>
           <Badge badgeContent={4} color='error'>
@@ -72,7 +72,7 @@ const Navbar = () => {
       </StyledToolBar>
       <Menu
         sx={{
-          top:"35px",
+          top: "35px",
         }}
         id='demo-positioned-menu'
         aria-labelledby='demo-positioned-button'

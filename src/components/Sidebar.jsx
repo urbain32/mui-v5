@@ -5,7 +5,7 @@ import {
   ListItemText,
   ListItem,
   ListItemButton,
-  Switch
+  Switch,
 } from "@mui/material";
 import {
   AccountBox,
@@ -20,7 +20,7 @@ import {
 const Sidebar = () => {
   return (
     <Box sx={{ display: { xs: "none", sm: "inline-block" } }} flex={1} p={2}>
-      <Box position="fixed">
+      <Box position='fixed'>
         <List>
           <ListItem disablePadding>
             <ListItemButton component='a' href='#home'>

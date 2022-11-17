@@ -1,4 +1,3 @@
-import React from "react";
 import { MoreVert, Share, Favorite, FavoriteBorder } from "@mui/icons-material";
 import {
   Avatar,
@@ -11,7 +10,8 @@ import {
   CardContent,
   Checkbox,
 } from "@mui/material";
-const Post = () => {
+
+const Post = ({ like, setLike }) => {
   return (
     <Card sx={{ margin: 2 }}>
       <CardHeader
@@ -30,7 +30,7 @@ const Post = () => {
       />
       <CardMedia
         component='img'
-        height='20%'
+        height='300px'
         image='https://source.unsplash.com/random'
         alt='Paella dish'
       />
@@ -42,7 +42,11 @@ const Post = () => {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label='add to favorites'>
+        <IconButton
+          onClick={() => {
+            setLike(like + 1);
+          }}
+          aria-label='add to favorites'>
           <Checkbox
             icon={<FavoriteBorder />}
             checkedIcon={<Favorite sx={{ color: "red" }} />}
