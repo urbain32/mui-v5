@@ -35,7 +35,13 @@ const Modal = ({ open, setOpen }) => {
       onClose={(e) => setOpen(false)}
       aria-labelledby='child-modal-title'
       aria-describedby='child-modal-description'>
-      <Box width={400} height={300} borderRadius={5} p={3} bgcolor='whitesmoke'>
+      <Box
+        width={400}
+        height={300}
+        borderRadius={5}
+        p={3}
+        bgcolor={"background.default"}
+        color={"text.primary"}>
         <Close
           onClick={() => setOpen(false)}
           sx={{

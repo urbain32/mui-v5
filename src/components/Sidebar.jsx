@@ -17,7 +17,10 @@ import {
   Settings,
   Storefront,
 } from "@mui/icons-material";
-const Sidebar = () => {
+const Sidebar = ({ mode, setMode }) => {
+  const darkMode = () => {
+    setMode(mode === "light" ? "dark" : "light");
+  };
   return (
     <Box sx={{ display: { xs: "none", sm: "inline-block" } }} flex={1} p={2}>
       <Box position='fixed'>
@@ -83,7 +86,7 @@ const Sidebar = () => {
               <ListItemIcon>
                 <ModeNight />
               </ListItemIcon>
-              <Switch defaultChecked color='secondary' />
+              <Switch onChange={darkMode} />
             </ListItemButton>
           </ListItem>
         </List>
