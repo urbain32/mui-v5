@@ -47,7 +47,7 @@ const Navbar = ({ like }) => {
         </Typography>
         <Pets sx={{ display: { xs: "block", sm: "none" } }} />
         <Search>
-          <InputBase placeholder='search' />{" "}
+          <InputBase color='red' placeholder='search' />{" "}
         </Search>
         <Icons>
           <Badge badgeContent={like ? like : "4"} color='error'>
